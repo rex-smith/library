@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="library.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8442c04c41.js" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
 <body>
@@ -13,16 +17,42 @@
       <span>Greatreads</span>
     </div>
     <div class="navbar-menu">
-      <button>My Books</button>
-      <button>Add Book</button>
+
     </div>
   </nav>
   <div class="main">
     <div class="main-content">
-      <div class="library-container">
-      
+      <h1>My Library</h1>
+      <div id="library-container">
+        
+      </div>
+      <div>
+        <button id="show-form-button" class="button button-add">New Book</button>
+      </div>
+      <div class="form-container">
+        <form id="new-book-form" class="hidden">
+          <h1>New Book</h1>
+          <div class="field">
+            <label for="title-input">Title:</label>
+            <input type="text" id="title-input">
+          </div>
+          <div class="field">
+            <label for="author-input">Author:</label>
+            <input type="text" id="author-input">
+          </div>
+          <div class="field">
+            <label for="pages-input">Pages:</label>
+            <input type="number" id="pages-input">
+          </div>
+          <div class="field">
+            <label for="read-input">Read</label>
+            <input type="checkbox" id="read-input">
+          </div>
+          <button type="submit" id="new-book-button" class="button button-add">Add Book</button>
+        </form>
       </div>
     </div>
   </div>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

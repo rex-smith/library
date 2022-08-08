@@ -1,27 +1,254 @@
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Beginning of Styling */
+
+body {
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  color: brown;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: brown;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+h3 {
+  color: gray;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+p {
+  color: black;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
 .navbar {
-
+  background-color: brown;
+  color: white;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-shadow: 0px 0px 2px white;
 }
 
 .navbar-brand {
-
+  width: 300px;
+  padding-left: 15px;
+  font-size: 2.5rem;
 }
 
-.navbar-brand {
-
+.navbar-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-.main {
-
+.nav-button {
+  background-color: transparent;
+  color: white;
+  border: 2px white solid;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 8px;
+  text-align: center;
+  margin: 10px;
 }
 
-.container {
-
+.nav-button:hover {
+  background-color: white;
+  color: brown;
 }
 
 .main-content {
+  width: 800px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
 
+#library-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  margin-bottom: 20px;
 }
 
 .book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgb(150, 150, 150);
+  margin: 5px;
+  padding: 10px;
+}
+
+.book-title {
+
+}
+
+.book-author {
+
+}
+
+.book-info {
   
 }
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+}
+
+#new-book-form {
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgb(164, 164, 164);
+  margin: 5px;
+  padding: 5px;
+}
+
+.field {
+  display: flex;
+  margin: 10px;  
+}
+
+.field input {
+  width: 200px;
+}
+
+.field label {
+  width: 100px;
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 5px;
+  text-align: center;
+}
+
+.button-read {
+  background-color: lightblue;
+  color: steelblue;
+  border: 2px white solid;
+}
+.button-read:hover {
+  background-color: steelblue;
+  color: lightblue;
+}
+
+.button-primary {
+  background-color: brown;
+  color: white;
+  border: 2px brown solid;
+}
+.button-primary:hover {
+  background-color: white;
+  color: brown;
+}
+
+.button-secondary {
+  background-color: white;
+  color: brown;
+  border: 2px brown solid;
+}
+.button-secondary:hover {
+  background-color: brown;
+  color: white;
+}
+
+.button-delete {
+  background-color: rgb(216, 136, 136);
+  color: rgb(151, 54, 54);
+  border: none;
+}
+
+.button-delete:hover {
+  background-color: rgb(151, 54, 54);
+  color: rgb(216, 136, 136);
+}
+
+.button-add {
+  background-color: rgb(148, 223, 148);
+  color: green;
+  border: none;
+}
+
+.button-add:hover {
+  background-color: green;
+  color: rgb(148, 223, 148);
+}
+
