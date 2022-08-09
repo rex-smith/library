@@ -36,27 +36,28 @@ const ulysses = new Book('Ulysses', 'James Joyce', 730, false);
 // Book Card Creation
 
 function newBookCard(book) {
-  const newBookCard = document.createElement('div');
+  let newBookCard = document.createElement('div');
   newBookCard.classList.add('book-card');
-  const newBookCardTitle = document.createElement('h2');
+  newBookCard.id = String(book.title);
+  let newBookCardTitle = document.createElement('h2');
 
   // Adding in book card's information
   newBookCardTitle.innerHTML = book.title;
   newBookCard.appendChild(newBookCardTitle);
 
-  const newBookCardAuthor = document.createElement('h3');
+  let newBookCardAuthor = document.createElement('h3');
   newBookCardAuthor.innerHTML = `by ${book.author}`;
   newBookCard.appendChild(newBookCardAuthor);
 
-  const newBookCardPages = document.createElement('p');
+  let newBookCardPages = document.createElement('p');
   newBookCardPages.innerHTML = `${book.pages} pages`;
   newBookCard.appendChild(newBookCardPages);
 
-  const newBookCardRead = document.createElement('p');
+  let newBookCardRead = document.createElement('p');
   newBookCardRead.innerHTML = (book.read ? 'Read' : 'Not read yet');
   newBookCard.appendChild(newBookCardRead);
 
-  const newBookCardReadButton = document.createElement('button');
+  let newBookCardReadButton = document.createElement('button');
   newBookCardReadButton.classList.add('button', 'button-read');
   newBookCardReadButton.innerHTML = (book.read ? 'Mark as unread' : 'Mark as read');
   newBookCardReadButton.addEventListener('click', () => {
@@ -68,13 +69,12 @@ function newBookCard(book) {
   newBookCard.appendChild(newBookCardReadButton);
   
   // Delete Book Button
-  const deleteBookButton = document.createElement('button');
+  let deleteBookButton = document.createElement('button');
   deleteBookButton.innerHTML = 'Remove Book';
   deleteBookButton.classList.add('button', 'button-delete');
   deleteBookButton.addEventListener('click', () => {
     myLibrary.splice(myLibrary.indexOf(book), 1);
     libraryContainer.removeChild(newBookCard);
-    console.log(myLibrary);
   });
   newBookCard.appendChild(deleteBookButton);
 
